@@ -42,20 +42,20 @@
                     <div class="card-body">
                         <h2 class="card-title text-center">Admin Login</h2>
                         <form action="{{route('adminkpk.authenticate')}}" method="POST" >
-                            
+
                             @csrf
                             <div class="mb-3">
                                 <label for="email" class="form-label">email</label>
                                 <input type="text"  class="form-control @error('email') is-invalid @enderror" id="email" name="email">
                                 @error('email')
-                                  <p class="invalid-feedback">{{$message}}</p>  
+                                  <p class="invalid-feedback">{{$message}}</p>
                                 @enderror
                             </div>
                             <div class="mb-3">
                                 <label for="password" class="form-label">Password</label>
                                 <input type="password"  class="form-control @error('password') is-invalid @enderror" name="password" id="password" >
                                 @error('password')
-                                  <p class="invalid-feedback">{{$message}}</p>  
+                                  <p class="invalid-feedback">{{$message}}</p>
                                 @enderror
                             </div>
 
@@ -65,7 +65,7 @@
                 </div>
                 <a href="{{route('login.register')}}">don't have an account <h1>Register</h1> </a>
             </div>
-            
+
         </div>
     </div>
 
